@@ -34,20 +34,25 @@ class PasswordGeneratorScreen extends StatelessWidget {
 
               return SingleChildScrollView(
                   child: Column(children: <Widget>[
-                Container(
-                  padding: EdgeInsets.all(Dimens.padding),
-                  margin: EdgeInsets.all(Dimens.padding),
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                        color: viewModel.state.password.isNotEmpty
-                            ? Theme.of(context).colorScheme.secondary
-                            : Colors.transparent,
-                        width: Dimens.border),
-                    borderRadius: BorderRadius.circular(Dimens.borderRadius),
-                  ),
-                  child: Text(
-                    viewModel.state.password,
-                    style: Theme.of(context).textTheme.headlineMedium,
+                ClipRect(
+                  child: Container(
+                    padding: EdgeInsets.all(Dimens.padding),
+                    margin: EdgeInsets.all(Dimens.padding),
+                    height: Dimens.containerHeight,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: Theme.of(context).colorScheme.primary,
+                        width: Dimens.border,
+                      ),
+                      borderRadius: BorderRadius.circular(Dimens.borderRadius),
+                    ),
+                    child: Center(
+                      child: Text(
+                        viewModel.state.password,
+                        style: Theme.of(context).textTheme.headlineMedium,
+                      ),
+                    ),
                   ),
                 ),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
