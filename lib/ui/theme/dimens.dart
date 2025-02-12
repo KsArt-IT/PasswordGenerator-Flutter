@@ -4,4 +4,5 @@ interface class Dimens {
   static const borderRadius = 4.0;
   static const spacing = 4.0;
   static const border = 2.0;
+  static const containerHeight = 60.0;
 }
