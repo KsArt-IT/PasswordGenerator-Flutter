@@ -16,6 +16,7 @@ class PasswordGeneratorApp extends StatelessWidget {
 
     return MaterialApp(
       title: '',
+      debugShowCheckedModeBanner: false,
       scaffoldMessengerKey: scaffoldMessengerKey,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
